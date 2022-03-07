@@ -1,12 +1,12 @@
 import "./app.css";
 import NavBar from "./components/navbar";
-import Habit from "./components/habit";
+import Habits from "./components/habits";
 
 function App() {
   return (
     <div>
       <NavBar />
-      <Habit />
+      <Habits />
     </div>
   );
 }
