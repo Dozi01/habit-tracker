@@ -1,7 +1,7 @@
-import React from "react";
+import React, { PureComponent } from "react";
 import styles from "./navbar.module.css";
 
-class NavBar extends React.Component {
+class NavBar extends PureComponent {
   render() {
     return (
       <header>
