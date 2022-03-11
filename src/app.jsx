@@ -3,7 +3,7 @@ import "./app.css";
 import NavBar from "./components/navbar";
 import Habits from "./components/habits";
 
-class App extends Component {
+function App() {
   state = {
     habits: [
       { id: 1, name: "reading", count: 0 },
@@ -54,23 +54,21 @@ class App extends Component {
     this.setState({ habits });
   };
 
-  render() {
-    return (
-      <>
-        <NavBar
-          habitNum={this.state.habits.filter((item) => item.count > 0).length}
-        />
-        <Habits
-          habits={this.state.habits}
-          handleIncrease={this.handleIncrease}
-          handleDecrease={this.handleDecrease}
-          onDelete={this.onDelete}
-          onAdd={this.onAdd}
-          onReset={this.onReset}
-        />
-      </>
-    );
-  }
+  return (
+    <>
+      <NavBar
+        habitNum={this.state.habits.filter((item) => item.count > 0).length}
+      />
+      <Habits
+        habits={this.state.habits}
+        handleIncrease={this.handleIncrease}
+        handleDecrease={this.handleDecrease}
+        onDelete={this.onDelete}
+        onAdd={this.onAdd}
+        onReset={this.onReset}
+      />
+    </>
+  );
 }
 
 export default App;
